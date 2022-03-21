@@ -9,7 +9,7 @@ export default function App() {
         source={require("./assets/adaptive-icon.png")}
         style={styles.logo}
       />
-      <Text>hello</Text>
+      <Text>hello bro</Text>
       <StatusBar style="auto" />
     </View>
   )

@@ -18,6 +18,6 @@ import App from "./App"
 describe('index', () => {
   it('should check render', () => {
     const { getByText } = render(<App></App>)
-    expect(getByText('hello')).toBeTruthy();
+    expect(getByText('hello bro')).toBeTruthy();
   })
 })
