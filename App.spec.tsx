@@ -1,7 +1,8 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import { render, fireEvent } from './src/utils/test-utils';
+import { render, fireEvent, waitFor } from './src/utils/test-utils';
 import App from "./App"
+import userEvent from '@testing-library/user-event'
 
 /* describe("<App />", () => {
   it("has 2 child", () => {
@@ -15,9 +16,25 @@ import App from "./App"
   })
 }) */
 
-describe('index', () => {
-  it('should check render', () => {
-    const { getByText } = render(<App></App>)
-    expect(getByText('hello bro')).toBeTruthy();
+describe('TO DO list', () => {
+  it('should add a todo', async () => {
+    const { getByText, getByTestId } = render(<App></App>)
+    const btnAdicionar = getByTestId('btn');
+    const textInput = getByTestId('textInput');
+
+    const novoTodo = 'novo item';
+
+
+    fireEvent.changeText(textInput, novoTodo);
+
+    fireEvent(
+      btnAdicionar,
+      'press  ',
+    )
+    
+    expect(getByText(novoTodo)).toBeTruthy();
+
+
+   
   })
 })

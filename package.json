@@ -14,8 +14,11 @@
     "test:badges": "yarn test:ci  && jest-coverage-badges --input coverage/coverage-summary.json --output __badges__"
   },
   "dependencies": {
+    "@react-native-community/checkbox": "^0.5.12",
     "@testing-library/react-native": "^9.0.0",
+    "@testing-library/user-event": "^13.5.0",
     "expo": "^44.0.0",
+    "expo-checkbox": "^2.0.0",
     "expo-status-bar": "~1.2.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
